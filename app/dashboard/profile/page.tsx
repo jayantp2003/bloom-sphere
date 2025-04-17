@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Loader2, Save, User } from "lucide-react"
+import { Loader2, Save } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -39,7 +39,7 @@ export default function ProfilePage() {
             <div className="flex flex-col items-center space-y-4">
               <div className="relative">
                 <div className="h-24 w-24 rounded-full bg-muted flex items-center justify-center overflow-hidden">
-                  <User className="h-12 w-12 text-muted-foreground" />
+                  <img src="/mystical-forest-spirit.png" alt="User avatar" className="h-full w-full object-cover" />
                 </div>
                 <Button size="sm" variant="outline" className="absolute bottom-0 right-0 rounded-full h-8 w-8 p-0">
                   <span className="sr-only">Change avatar</span>

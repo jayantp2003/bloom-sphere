@@ -13,7 +13,6 @@ import {
   ChevronRight,
   CreditCard,
   FileText,
-  GraduationCap,
   History,
   Home,
   LogOut,
@@ -100,11 +99,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         <div className="flex h-14 items-center border-b px-4 justify-between">
           {!collapsed && (
             <Link href="/dashboard" className="flex items-center gap-2">
-              <GraduationCap className="h-6 w-6 text-primary" />
+              <Brain className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold">Bloomsphere</span>
             </Link>
           )}
-          {collapsed && <GraduationCap className="h-6 w-6 text-primary mx-auto" />}
+          {collapsed && <Brain className="h-6 w-6 text-primary mx-auto" />}
           <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => setCollapsed(!collapsed)}>
             {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
             <span className="sr-only">Toggle sidebar</span>
@@ -136,9 +135,6 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
               </NavItem>
               <NavItem href="/dashboard/credits" icon={CreditCard}>
                 Credits
-              </NavItem>
-              <NavItem href="/dashboard/profile" icon={User}>
-                Profile
               </NavItem>
               <NavItem href="/dashboard/settings" icon={Settings}>
                 Settings
@@ -173,7 +169,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
               <SheetContent side="left" className="w-64 p-0">
                 <div className="flex h-14 items-center border-b px-4">
                   <Link href="/dashboard" className="flex items-center gap-2">
-                    <GraduationCap className="h-6 w-6 text-primary" />
+                    <Brain className="h-6 w-6 text-primary" />
                     <span className="text-xl font-bold">Bloomsphere</span>
                   </Link>
                 </div>
@@ -271,18 +267,6 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                           <span>Credits</span>
                         </Link>
                         <Link
-                          href="/dashboard/profile"
-                          className={cn(
-                            "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-all hover:bg-accent",
-                            isActive("/dashboard/profile")
-                              ? "bg-accent text-accent-foreground"
-                              : "text-muted-foreground",
-                          )}
-                        >
-                          <User className={cn("h-5 w-5", isActive("/dashboard/profile") && "text-primary")} />
-                          <span>Profile</span>
-                        </Link>
-                        <Link
                           href="/dashboard/settings"
                           className={cn(
                             "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-all hover:bg-accent",
@@ -310,7 +294,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             </Sheet>
 
             <div className="flex items-center gap-2 md:hidden">
-              <GraduationCap className="h-6 w-6 text-primary" />
+              <Brain className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold">Bloomsphere</span>
             </div>
 

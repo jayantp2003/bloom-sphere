@@ -56,57 +56,55 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        <Card className="md:col-span-2">
-          <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
-            <CardDescription>Get started with these common tasks</CardDescription>
-          </CardHeader>
-          <CardContent className="pt-2">
-            <div className="grid gap-5 md:grid-cols-3">
-              <Link href="/dashboard/generate" className="block">
-                <div className="rounded-lg border bg-card p-5 hover:bg-accent/50 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-full bg-primary/10 p-2">
-                      <FileText className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium">Smart Paper Generation</h3>
-                      <p className="text-sm text-muted-foreground">Create Bloom's-aligned question papers</p>
-                    </div>
-                  </div>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Quick Actions</CardTitle>
+          <CardDescription>Get started with these common tasks</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          {[
+            {
+              href: "/dashboard/generate",
+              icon: <FileText className="h-5 w-5 text-primary" />,
+              title: "Smart Paper Generation",
+              desc: "Create Bloom's-aligned question papers",
+              buttonText: "Get Started",
+            },
+            {
+              href: "/dashboard/evaluate",
+              icon: <Brain className="h-5 w-5 text-primary" />,
+              title: "Cognitive Analysis",
+              desc: "Get Bloom's Taxonomy breakdowns",
+              buttonText: "Analyze Content",
+            },
+            {
+              href: "/dashboard/analytics",
+              icon: <BarChart3 className="h-5 w-5 text-primary" />,
+              title: "Learning Analytics",
+              desc: "Track performance with rubrics",
+              buttonText: "View Analytics",
+            },
+          ].map(({ href, icon, title, desc, buttonText }) => (
+            <div key={href} className="rounded-lg border bg-card p-4">
+              <div className="flex items-center gap-4">
+                <div className="rounded-full bg-primary/10 p-2 flex-shrink-0">{icon}</div>
+                <div className="flex-grow">
+                  <h3 className="font-medium text-base">{title}</h3>
+                  <p className="text-sm text-muted-foreground">{desc}</p>
                 </div>
-              </Link>
-              <Link href="/dashboard/evaluate" className="block">
-                <div className="rounded-lg border bg-card p-5 hover:bg-accent/50 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-full bg-primary/10 p-2">
-                      <Brain className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium">Cognitive Analysis</h3>
-                      <p className="text-sm text-muted-foreground">Get Bloom's Taxonomy breakdowns</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="/dashboard/analytics" className="block">
-                <div className="rounded-lg border bg-card p-5 hover:bg-accent/50 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-full bg-primary/10 p-2">
-                      <BarChart3 className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium">Learning Analytics</h3>
-                      <p className="text-sm text-muted-foreground">Track performance with rubrics</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+                <Link href={href}>
+                  <Button size="sm" className="whitespace-nowrap">
+                    {buttonText}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
-          </CardContent>
-        </Card>
+          ))}
+        </CardContent>
+      </Card>
 
+      <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
             <CardTitle>Credit Usage</CardTitle>
@@ -147,7 +145,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader>
             <CardTitle>Tips & Tricks</CardTitle>
-            <CardDescription>Get the most out of EduQuest</CardDescription>
+            <CardDescription>Get the most out of Bloomsphere</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
