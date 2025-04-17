@@ -201,53 +201,28 @@ export function AnalysisResults() {
           <h3 className="font-medium">Bloom's Taxonomy Performance</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span>Remembering</span>
-                <span className="text-muted-foreground">85%</span>
-              </div>
-              <Progress value={85} className="h-2" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span>Understanding</span>
-                <span className="text-muted-foreground">78%</span>
-              </div>
-              <Progress value={78} className="h-2" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span>Applying</span>
-                <span className="text-muted-foreground">65%</span>
-              </div>
-              <Progress value={65} className="h-2" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span>Analyzing</span>
-                <span className="text-muted-foreground">72%</span>
-              </div>
-              <Progress value={72} className="h-2" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span>Evaluating</span>
-                <span className="text-muted-foreground">70%</span>
-              </div>
-              <Progress value={70} className="h-2" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span>Creating</span>
-                <span className="text-muted-foreground">75%</span>
-              </div>
-              <Progress value={75} className="h-2" />
-            </div>
+            {[
+              { level: "remembering", percentage: 85 },
+              { level: "understanding", percentage: 78 },
+              { level: "applying", percentage: 65 },
+              { level: "analyzing", percentage: 72 },
+              { level: "evaluating", percentage: 70 },
+              { level: "creating", percentage: 75 },
+            ].map(({ level, percentage }) => (
+              <Card key={level} className="overflow-hidden">
+                <CardHeader className="p-4">
+                  <CardTitle className="text-sm capitalize">{level}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-4 pt-0">
+                  <div className="flex items-center justify-between">
+                    <div className="w-full">
+                      <Progress value={percentage} className="h-2" />
+                    </div>
+                    <span className="ml-2 text-sm font-medium">{percentage}%</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 

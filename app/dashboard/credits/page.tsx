@@ -86,8 +86,8 @@ export default function CreditsPage() {
                     >
                       <div className="text-center">
                         <div className="text-xl font-bold">500 Credits</div>
-                        <div className="text-2xl font-bold mt-2">$9.99</div>
-                        <div className="text-xs text-muted-foreground mt-1">$0.02 per credit</div>
+                        <div className="text-2xl font-bold mt-2">$4.99</div>
+                        <div className="text-xs text-muted-foreground mt-1">$0.01 per credit</div>
                       </div>
                     </Label>
                   </div>
@@ -102,8 +102,8 @@ export default function CreditsPage() {
                       </div>
                       <div className="text-center">
                         <div className="text-xl font-bold">1000 Credits</div>
-                        <div className="text-2xl font-bold mt-2">$17.99</div>
-                        <div className="text-xs text-muted-foreground mt-1">$0.018 per credit</div>
+                        <div className="text-2xl font-bold mt-2">$8.99</div>
+                        <div className="text-xs text-muted-foreground mt-1">$0.009 per credit</div>
                       </div>
                     </Label>
                   </div>
@@ -115,8 +115,8 @@ export default function CreditsPage() {
                     >
                       <div className="text-center">
                         <div className="text-xl font-bold">2000 Credits</div>
-                        <div className="text-2xl font-bold mt-2">$29.99</div>
-                        <div className="text-xs text-muted-foreground mt-1">$0.015 per credit</div>
+                        <div className="text-2xl font-bold mt-2">$14.99</div>
+                        <div className="text-xs text-muted-foreground mt-1">$0.0075 per credit</div>
                       </div>
                     </Label>
                   </div>
@@ -217,7 +217,7 @@ export default function CreditsPage() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="text-center">
-                      <span className="text-3xl font-bold">$19.99</span>
+                      <span className="text-3xl font-bold">$9.99</span>
                       <span className="text-muted-foreground">/month</span>
                     </div>
                     <ul className="space-y-2">

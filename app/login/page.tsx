@@ -33,7 +33,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 bg-muted/30">
       <Link href="/" className="flex items-center gap-2 mb-8">
         <GraduationCap className="h-6 w-6 text-primary" />
-        <span className="text-xl font-bold">EduQuest</span>
+        <span className="text-xl font-bold">Bloomsphere</span>
       </Link>
 
       <Card className="w-full max-w-md shadow-sm">

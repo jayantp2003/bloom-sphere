@@ -10,7 +10,7 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">EduQuest</span>
+            <span className="text-xl font-bold">Bloomsphere</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link href="#features" className="text-sm font-medium hover:underline">
@@ -163,8 +163,8 @@ export default function Home() {
           <div className="container text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Education?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Join thousands of educators and students who are already using EduQuest to create better assessments and
-              learning experiences.
+              Join thousands of educators and students who are already using Bloomsphere to create better assessments
+              and learning experiences.
             </p>
             <Link href="/signup">
               <Button size="lg">Get Started Today</Button>
@@ -176,9 +176,11 @@ export default function Home() {
         <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-5 w-5 text-primary" />
-            <span className="font-bold">EduQuest</span>
+            <span className="font-bold">Bloomsphere</span>
           </div>
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} EduQuest. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Bloomsphere. All rights reserved.
+          </p>
           <div className="flex gap-4">
             <Link href="/terms" className="text-sm text-muted-foreground hover:underline">
               Terms

@@ -33,13 +33,15 @@ export default function SignupPage() {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 bg-muted/30">
       <Link href="/" className="flex items-center gap-2 mb-8">
         <GraduationCap className="h-6 w-6 text-primary" />
-        <span className="text-xl font-bold">EduQuest</span>
+        <span className="text-xl font-bold">Bloomsphere</span>
       </Link>
 
       <Card className="w-full max-w-md shadow-sm">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold text-center">Create an account</CardTitle>
-          <CardDescription className="text-center">Enter your details to create your EduQuest account</CardDescription>
+          <CardDescription className="text-center">
+            Enter your details to create your Bloomsphere account
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <form onSubmit={handleSubmit} className="space-y-5">

@@ -101,7 +101,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           {!collapsed && (
             <Link href="/dashboard" className="flex items-center gap-2">
               <GraduationCap className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">EduQuest</span>
+              <span className="text-xl font-bold">Bloomsphere</span>
             </Link>
           )}
           {collapsed && <GraduationCap className="h-6 w-6 text-primary mx-auto" />}
@@ -174,7 +174,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 <div className="flex h-14 items-center border-b px-4">
                   <Link href="/dashboard" className="flex items-center gap-2">
                     <GraduationCap className="h-6 w-6 text-primary" />
-                    <span className="text-xl font-bold">EduQuest</span>
+                    <span className="text-xl font-bold">Bloomsphere</span>
                   </Link>
                 </div>
                 <div className="flex-1 overflow-auto py-4">
@@ -311,7 +311,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
             <div className="flex items-center gap-2 md:hidden">
               <GraduationCap className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">EduQuest</span>
+              <span className="text-xl font-bold">Bloomsphere</span>
             </div>
 
             <div className="ml-auto flex items-center gap-4">
